@@ -1,0 +1,15 @@
+import discord
+import asyncio
+from discord.ext import commands
+from discord.ext.commands import Bot
+bot = commands.Bot(command_prefix='*')
+@bot.event
+async def on_message(message):
+    print(" ")
+    print("Message ID: ", message.id)
+    print(" ")
+    print("Channel: ", message.channel)
+    print(" ")
+    print("{", message.author, "}", " ", message.content)
+    print(" ")
+bot.run("token")
